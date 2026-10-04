@@ -8,6 +8,9 @@ Status: Phase 1 built, 4 October 2026. The site, all ten lessons and the Cloudfl
 - **Lessons:** each plays as a scroll-driven 3D scene with Next and Back buttons, arrow keys, a try-it control, a two-question quick check that can replay the step behind a wrong answer, and a sources list. Progress is saved in the browser and fills the ring.
 - **Two views:** the animation switch in the nav swaps every lesson to a plain page of still pictures. The pictures are drawn from the same scene data as the 3D, so the two always match, and the 3D code never downloads when animation is off.
 - **Look:** dark theme by default. The 3D scenes have lighting and reflections, rounded blocks with glowing edges, polished coins, soft shadows, a dotted floor, data packets moving along chain links and drifting particles. The static pictures have matching shading and shadows. Lesson 1's try-it is a live demo: edit a payment and its real SHA-256 fingerprint changes, breaking the chain.
+- **Home page:** a 3D version of the ring and logo as the hero, a live clip of lesson 1, a band of figures, a scrolling strip of topics, an FAQ, and "Developed by Krett.com" in the footer.
+- **SEO and AI discovery:** structured data on every page, a share image per lesson, `llms.txt` and `llms-full.txt`, a read-only MCP server at `/mcp`, and `pnpm seo:audit`. The 3D loads on the visitor's first interaction, so the first load stays light.
+- **Lighthouse (4 October 2026):** 100 in every category on desktop. On mobile, Accessibility, Best Practices, SEO and Agentic Browsing are 100, and Performance is 96 to 98.
 - **Facts:** every claim in the ten lessons is in a fact sheet with its source (107 claims). A fact-check against the research changed 11 sentences.
 - **Checked:** type-check, lint, the production build and the Cloudflare build all pass. Every route was tested on Cloudflare's local runtime, in both themes and both views, at desktop and phone widths.
 

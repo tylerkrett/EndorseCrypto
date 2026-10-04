@@ -40,7 +40,7 @@ export const llmsTxt = () =>
 		"",
 		"> Short, animated lessons that show UK beginners how crypto works and how it is used today. Plain English, education only, and every claim sourced and dated.",
 		"",
-		`${SITE_NAME} is education only. It does not sell, arrange or recommend crypto, and nothing on it is financial advice. ${RISK_NOTE}`,
+		`${SITE_NAME} does not sell, arrange or recommend crypto. ${RISK_NOTE}`,
 		"",
 		"## Lessons",
 		"",

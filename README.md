@@ -20,6 +20,7 @@ Cloudflare. See `plan.md` for the full plan.
 | `pnpm preview` | Cloudflare build, then a local server on the real Workers runtime |
 | `pnpm deploy` | Cloudflare build and deploy |
 | `pnpm typecheck` / `pnpm check` | Type check / Biome lint and format check |
+| `pnpm seo:audit --url <site>` | SEO and AI-discovery audit of every page; add `--lighthouse` for scores, `--json` for agents. Exits 1 on errors |
 
 ## Deploying to Cloudflare
 
@@ -51,3 +52,18 @@ only downloads when animation is on.
 A claim goes into a lesson only with a source in that lesson's fact sheet. Figures that
 change carry an "as of" date in the text. The research behind the lessons is in
 `reports/Crypto uses in markets 2026.md` and `research_notes/`.
+
+## SEO and AI discovery
+
+- Every page has a title, description, canonical URL, Open Graph and Twitter tags and a share
+  image (one per lesson). Titles and descriptions live in `src/lib/pages.ts`.
+- Structured data (`src/lib/structured-data.ts`): Organization and WebSite on every page,
+  Course on `/learn`, LearningResource with citations and BreadcrumbList on each lesson, and
+  FAQPage for the home page questions (`src/lib/faq.ts`).
+- `/llms.txt` and `/llms-full.txt` describe the site and every lesson, with sources, for AI
+  assistants.
+- `/mcp` is a small read-only MCP server (Streamable HTTP) with `list_lessons`, `get_lesson`,
+  `get_sources` and `search_lessons`. Discovery: `/.well-known/ai-catalog.json` and
+  `/mcp/server-card`.
+- `pnpm seo:audit` checks all of this, plus links, headings and image alt text, and can run
+  Lighthouse on every page.
