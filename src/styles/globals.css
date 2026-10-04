@@ -1,0 +1,376 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens, matching the Figma file's Theme collection (Light and Dark modes). Brand blue
+ * #00A4FF and the dark background #05080D come from the logo pack; everything else is derived.
+ * Light values sit on :root; dark values override them unless <html data-theme="light"> is set.
+ * Dark is the default; the inline script in the root layout applies a saved choice before first paint.
+ */
+:root {
+	color-scheme: light;
+	--bg-page: #ffffff;
+	--bg-panel: #f2f8fd;
+	--bg-surface: #e9f2fa;
+	--bg-surface-2: #dbe8f5;
+	--text-primary: #07111d;
+	--text-muted: #4a5b73;
+	--text-dim: #5e6e86;
+	--brand-blue: #00a4ff;
+	--brand-on: #0072bf;
+	--brand-ink: #05080d;
+	--accent-amber: #a65a00;
+	--status-green: #12753f;
+	--status-yellow: #7a5c00;
+	--status-red: #c62828;
+	--stroke-subtle: rgb(7 17 29 / 0.1);
+	--stroke-strong: rgb(7 17 29 / 0.2);
+	--page-glass: rgb(255 255 255 / 0.86);
+	--glow-blue: rgb(124 203 255 / 0.55);
+	--tint-blue: rgb(0 114 191 / 0.1);
+	--tint-blue-line: rgb(0 114 191 / 0.28);
+	--tint-amber: rgb(166 90 0 / 0.09);
+	--tint-amber-line: rgb(166 90 0 / 0.3);
+	--tint-green: rgb(18 117 63 / 0.1);
+	--tint-green-line: rgb(18 117 63 / 0.3);
+	--tint-red: rgb(198 40 40 / 0.08);
+	--tint-red-line: rgb(198 40 40 / 0.3);
+	--tint-dim: rgb(94 110 134 / 0.1);
+	--tint-dim-line: rgb(94 110 134 / 0.28);
+
+	/* Scene colours: each tone has a top, left and right face, as in the isometric storyboards. */
+	--scene-blue-top: #8fd6ff;
+	--scene-blue-left: #3db8ff;
+	--scene-blue-right: #0088d9;
+	--scene-red-top: #ffa3a3;
+	--scene-red-left: #f26161;
+	--scene-red-right: #c73e3e;
+	--scene-green-top: #8fe0b5;
+	--scene-green-left: #34b36e;
+	--scene-green-right: #1e8a50;
+	--scene-amber-top: #ffd694;
+	--scene-amber-left: #f5a623;
+	--scene-amber-right: #c27c00;
+	--scene-grey-top: #d5dfea;
+	--scene-grey-left: #b4c2d3;
+	--scene-grey-right: #94a5ba;
+	--scene-coin: #f5a623;
+	--scene-coin-edge: #c27c00;
+	--scene-line: #3d9ad6;
+	--scene-floor: #e3eef8;
+}
+
+/* Dark is the default: it applies unless the visitor has chosen light. */
+:root:not([data-theme="light"]) {
+	color-scheme: dark;
+	--bg-page: #05080d;
+	--bg-panel: #0a0f18;
+	--bg-surface: #101826;
+	--bg-surface-2: #18243a;
+	--text-primary: #ffffff;
+	--text-muted: #a7b4c8;
+	--text-dim: #8996ac;
+	--brand-on: #4dc0ff;
+	--accent-amber: #ffb347;
+	--status-green: #5fd39a;
+	--status-yellow: #f2c94c;
+	--status-red: #ff6b6b;
+	--stroke-subtle: rgb(255 255 255 / 0.1);
+	--stroke-strong: rgb(255 255 255 / 0.22);
+	--page-glass: rgb(5 8 13 / 0.82);
+	--glow-blue: rgb(0 164 255 / 0.3);
+	--tint-blue: rgb(77 192 255 / 0.14);
+	--tint-blue-line: rgb(77 192 255 / 0.34);
+	--tint-amber: rgb(255 179 71 / 0.12);
+	--tint-amber-line: rgb(255 179 71 / 0.34);
+	--tint-green: rgb(95 211 154 / 0.12);
+	--tint-green-line: rgb(95 211 154 / 0.34);
+	--tint-red: rgb(255 107 107 / 0.12);
+	--tint-red-line: rgb(255 107 107 / 0.36);
+	--tint-dim: rgb(137 150 172 / 0.14);
+	--tint-dim-line: rgb(137 150 172 / 0.3);
+
+	--scene-blue-top: #6ccbff;
+	--scene-blue-left: #00a4ff;
+	--scene-blue-right: #0067ad;
+	--scene-red-top: #ff9c9c;
+	--scene-red-left: #ff6b6b;
+	--scene-red-right: #c24545;
+	--scene-green-top: #8be3b6;
+	--scene-green-left: #5fd39a;
+	--scene-green-right: #2f9e69;
+	--scene-amber-top: #ffd08a;
+	--scene-amber-left: #ffb347;
+	--scene-amber-right: #c97e12;
+	--scene-grey-top: #3a4660;
+	--scene-grey-left: #283349;
+	--scene-grey-right: #1b2436;
+	--scene-coin: #ffb347;
+	--scene-coin-edge: #c97e12;
+	--scene-line: #4dc0ff;
+	--scene-floor: #0d1522;
+}
+
+@theme inline {
+	--color-page: var(--bg-page);
+	--color-panel: var(--bg-panel);
+	--color-surface: var(--bg-surface);
+	--color-surface-2: var(--bg-surface-2);
+	--color-fg: var(--text-primary);
+	--color-muted: var(--text-muted);
+	--color-dim: var(--text-dim);
+	--color-brand: var(--brand-blue);
+	--color-brand-on: var(--brand-on);
+	--color-brand-ink: var(--brand-ink);
+	--color-accent: var(--accent-amber);
+	--color-ok: var(--status-green);
+	--color-caution: var(--status-yellow);
+	--color-bad: var(--status-red);
+	--color-line: var(--stroke-subtle);
+	--color-line-strong: var(--stroke-strong);
+	--color-glass: var(--page-glass);
+	--color-glow: var(--glow-blue);
+	--color-tint-blue: var(--tint-blue);
+	--color-tint-blue-line: var(--tint-blue-line);
+	--color-tint-amber: var(--tint-amber);
+	--color-tint-amber-line: var(--tint-amber-line);
+	--color-tint-green: var(--tint-green);
+	--color-tint-green-line: var(--tint-green-line);
+	--color-tint-red: var(--tint-red);
+	--color-tint-red-line: var(--tint-red-line);
+	--color-tint-dim: var(--tint-dim);
+	--color-tint-dim-line: var(--tint-dim-line);
+
+	--font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+	--font-display:
+		var(--font-sora), var(--font-geist), ui-sans-serif, sans-serif;
+	--font-mono:
+		var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+	--font-brand: var(--font-sora), sans-serif;
+}
+
+@layer base {
+	html {
+		background: var(--bg-page);
+		-webkit-text-size-adjust: 100%;
+	}
+	body {
+		background: var(--bg-page);
+		color: var(--text-primary);
+		font-family: var(--font-sans);
+		font-size: 16px;
+		line-height: 1.5;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+	::selection {
+		background: color-mix(in srgb, var(--brand-blue) 30%, transparent);
+	}
+	:focus-visible {
+		outline: 2px solid var(--brand-on);
+		outline-offset: 2px;
+	}
+	h1,
+	h2,
+	h3,
+	h4 {
+		text-wrap: balance;
+	}
+	p {
+		text-wrap: pretty;
+	}
+}
+
+/* Type, matching the Figma text styles. */
+@utility display-hero {
+	font-family: var(--font-display);
+	font-weight: 800;
+	letter-spacing: -0.03em;
+	line-height: 1.02;
+	font-size: 44px;
+	@media (min-width: 900px) {
+		font-size: 60px;
+	}
+	@media (min-width: 1440px) {
+		font-size: 76px;
+	}
+}
+@utility display-section {
+	font-family: var(--font-display);
+	font-weight: 800;
+	letter-spacing: -0.03em;
+	line-height: 1.06;
+	font-size: 34px;
+	@media (min-width: 900px) {
+		font-size: 42px;
+	}
+	@media (min-width: 1440px) {
+		font-size: 52px;
+	}
+}
+@utility display-h3 {
+	font-family: var(--font-display);
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	line-height: 1.2;
+	font-size: 22px;
+	@media (min-width: 900px) {
+		font-size: 24px;
+	}
+}
+@utility eyebrow {
+	font-family: var(--font-mono);
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 1.4;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+@utility mono-tag {
+	font-family: var(--font-mono);
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 1.4;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+/* Layout: a 1280px column with 80 / 40 / 20px gutters, as on theWyze. */
+@utility container-page {
+	width: 100%;
+	max-width: calc(1280px + 2 * 40px);
+	margin-inline: auto;
+	padding-inline: 20px;
+	@media (min-width: 900px) {
+		padding-inline: 40px;
+	}
+	@media (min-width: 1440px) {
+		max-width: calc(1280px + 2 * 80px);
+		padding-inline: 80px;
+	}
+}
+@utility section-band {
+	padding-block: 72px;
+	@media (min-width: 900px) {
+		padding-block: 96px;
+	}
+	@media (min-width: 1440px) {
+		padding-block: 128px;
+	}
+}
+
+/*
+ * Animated and static views. The inline script sets <html data-motion="on|off"> before paint;
+ * without it (no JavaScript) the static view shows.
+ */
+:root:not([data-motion="on"]) .motion-only {
+	/* biome-ignore lint/complexity/noImportantStyles: the view switch must beat any layout utility */
+	display: none !important;
+}
+:root[data-motion="on"] .static-only {
+	/* biome-ignore lint/complexity/noImportantStyles: the view switch must beat any layout utility */
+	display: none !important;
+}
+
+/* Reveal on scroll, only when animation is on. Elements already on screen never hide. */
+:root[data-motion="on"] .reveal.is-pending {
+	opacity: 0;
+	transform: translateY(14px);
+}
+:root[data-motion="on"] .reveal {
+	transition:
+		opacity 500ms ease,
+		transform 500ms ease;
+}
+
+/* The hero ring: segments light up in turn, then the ring turns slowly. */
+@keyframes ring-segment {
+	from {
+		opacity: 0.16;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes ring-turn {
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes float-y {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-8px);
+	}
+}
+@keyframes pop-in {
+	from {
+		opacity: 0;
+		transform: translateY(8px) scale(0.96);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+:root[data-motion="on"] .ring-segment {
+	animation: ring-segment 500ms ease-out both;
+}
+:root[data-motion="on"] .ring-turn {
+	animation: ring-turn 120s linear infinite;
+	transform-origin: center;
+	transform-box: fill-box;
+}
+:root[data-motion="on"] .float-y {
+	animation: float-y 6s ease-in-out infinite;
+}
+:root[data-motion="on"] .pop-in {
+	animation: pop-in 400ms ease-out both;
+}
+
+/* The topic strip scrolls sideways, forever. */
+@keyframes marquee {
+	to {
+		transform: translateX(-50%);
+	}
+}
+:root[data-motion="on"] .marquee {
+	animation: marquee 50s linear infinite;
+}
+.marquee-mask {
+	mask-image: linear-gradient(
+		90deg,
+		transparent,
+		#000 10%,
+		#000 90%,
+		transparent
+	);
+}
+
+/* A dotted backdrop that fades out towards the edges. */
+.dot-field {
+	background-image: radial-gradient(
+		color-mix(in srgb, var(--scene-line) 45%, transparent) 1.2px,
+		transparent 1.4px
+	);
+	background-size: 26px 26px;
+	mask-image: radial-gradient(
+		ellipse 70% 60% at 70% 45%,
+		#000 20%,
+		transparent 75%
+	);
+}
+
+/* Lesson pages snap to each step while scrolling. */
+:root[data-motion="on"].lesson-snap {
+	scroll-snap-type: y proximity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	:root[data-motion="on"] .ring-turn,
+	:root[data-motion="on"] .float-y {
+		animation: none;
+	}
+}

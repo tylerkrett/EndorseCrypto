@@ -1,0 +1,20 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "endorsecrypto",
+	"main": ".open-next/worker.js",
+	"compatibility_date": "2026-09-01",
+	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+	"assets": {
+		"directory": ".open-next/assets",
+		"binding": "ASSETS"
+	},
+	// Uncomment once endorsecrypto.com is a zone in your Cloudflare account. Until then the site
+	// deploys to endorsecrypto.<your-subdomain>.workers.dev.
+	// "routes": [
+	// 	{ "pattern": "endorsecrypto.com", "custom_domain": true },
+	// 	{ "pattern": "www.endorsecrypto.com", "custom_domain": true }
+	// ],
+	"workers_dev": true,
+	"observability": { "enabled": true },
+	"upload_source_maps": true
+}

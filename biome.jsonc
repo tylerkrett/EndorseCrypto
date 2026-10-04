@@ -1,0 +1,79 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"root": true,
+	// Brand files and research are kept as delivered; Biome checks the app only.
+	"files": {
+		"includes": [
+			"**",
+			"!EndorseCrypto_Logo_Design_Pack",
+			"!research_notes",
+			"!reports",
+			"!public"
+		]
+	},
+	"vcs": {
+		"enabled": true,
+		"useIgnoreFile": true,
+		"clientKind": "git"
+	},
+	"assist": {
+		"enabled": true,
+		"actions": {
+			"recommended": true,
+			"source": {
+				"recommended": true,
+				"organizeImports": "on",
+				"useSortedAttributes": "on"
+			}
+		}
+	},
+	"formatter": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"nursery": {
+				"useSortedClasses": {
+					"level": "warn",
+					"fix": "safe",
+					"options": {
+						"functions": ["clsx", "cva", "cn"]
+					}
+				}
+			}
+		}
+	},
+	"html": {
+		"formatter": {
+			"enabled": true
+		}
+	},
+	"javascript": {
+		"assist": {
+			"enabled": true
+		},
+		"formatter": {
+			"enabled": true
+		},
+		"linter": {
+			"enabled": true
+		}
+	},
+	"css": {
+		"assist": {
+			"enabled": true
+		},
+		"formatter": {
+			"enabled": true
+		},
+		"linter": {
+			"enabled": true
+		},
+		"parser": {
+			"cssModules": true,
+			"tailwindDirectives": true
+		}
+	}
+}

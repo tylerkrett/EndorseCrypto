@@ -1,0 +1,102 @@
+Logo Files/EPS/Icon/Icon 1 - Primary.eps
+Logo Files/EPS/Logo/Logo 1 - Horizontal.eps
+Logo Files/EPS/Logo/Logo 2 - Portrait.eps
+Logo Files/EPS/Logo/Logo 3 - Stacked.eps
+Logo Files/JPG/Icon/Icon 1 - Primary - Dark Background.jpg
+Logo Files/JPG/Icon/Icon 1 - Primary - White Background.jpg
+Logo Files/JPG/Logo/Logo 1 - Horizontal - Dark Background.jpg
+Logo Files/JPG/Logo/Logo 1 - Horizontal - White Background.jpg
+Logo Files/JPG/Logo/Logo 2 - Portrait - Dark Background.jpg
+Logo Files/JPG/Logo/Logo 2 - Portrait - White Background.jpg
+Logo Files/JPG/Logo/Logo 3 - Stacked - Dark Background.jpg
+Logo Files/JPG/Logo/Logo 3 - Stacked - White Background.jpg
+Logo Files/PDF/Icon/Icon 1 - Primary.pdf
+Logo Files/PDF/Logo/Logo 1 - Horizontal.pdf
+Logo Files/PDF/Logo/Logo 2 - Portrait.pdf
+Logo Files/PDF/Logo/Logo 3 - Stacked.pdf
+Logo Files/PNG/Icon/Icon 1 - Primary - Dark Background.png
+Logo Files/PNG/Icon/Icon 1 - Primary - White Background.png
+Logo Files/PNG/Logo/Logo 1 - Horizontal - Dark Background.png
+Logo Files/PNG/Logo/Logo 1 - Horizontal - White Background.png
+Logo Files/PNG/Logo/Logo 2 - Portrait - Dark Background.png
+Logo Files/PNG/Logo/Logo 2 - Portrait - White Background.png
+Logo Files/PNG/Logo/Logo 3 - Stacked - Dark Background.png
+Logo Files/PNG/Logo/Logo 3 - Stacked - White Background.png
+Logo Files/SVG/Icon/Icon 1 - Primary - Brand Blue.svg
+Logo Files/SVG/Icon/Icon 1 - Primary - White.svg
+Logo Files/SVG/Logo/Logo 1 - Horizontal - Brand Blue.svg
+Logo Files/SVG/Logo/Logo 1 - Horizontal - White.svg
+Logo Files/SVG/Logo/Logo 2 - Portrait - Brand Blue.svg
+Logo Files/SVG/Logo/Logo 2 - Portrait - White.svg
+Logo Files/SVG/Logo/Logo 3 - Stacked - Brand Blue.svg
+Logo Files/SVG/Logo/Logo 3 - Stacked - White.svg
+Logo Files/Transparent/PDF/Icon/Icon 1 - Primary - Black.pdf
+Logo Files/Transparent/PDF/Icon/Icon 1 - Primary - Brand Blue.pdf
+Logo Files/Transparent/PDF/Icon/Icon 1 - Primary - White.pdf
+Logo Files/Transparent/PDF/Logo/Logo 1 - Horizontal - Black.pdf
+Logo Files/Transparent/PDF/Logo/Logo 1 - Horizontal - Brand Blue.pdf
+Logo Files/Transparent/PDF/Logo/Logo 1 - Horizontal - White.pdf
+Logo Files/Transparent/PDF/Logo/Logo 2 - Portrait - Black.pdf
+Logo Files/Transparent/PDF/Logo/Logo 2 - Portrait - Brand Blue.pdf
+Logo Files/Transparent/PDF/Logo/Logo 2 - Portrait - White.pdf
+Logo Files/Transparent/PDF/Logo/Logo 3 - Stacked - Black.pdf
+Logo Files/Transparent/PDF/Logo/Logo 3 - Stacked - Brand Blue.pdf
+Logo Files/Transparent/PDF/Logo/Logo 3 - Stacked - White.pdf
+Logo Files/Transparent/PNG/Icon/Icon 1 - Primary - Black.png
+Logo Files/Transparent/PNG/Icon/Icon 1 - Primary - Brand Blue.png
+Logo Files/Transparent/PNG/Icon/Icon 1 - Primary - White.png
+Logo Files/Transparent/PNG/Logo/Logo 1 - Horizontal - Black.png
+Logo Files/Transparent/PNG/Logo/Logo 1 - Horizontal - Brand Blue.png
+Logo Files/Transparent/PNG/Logo/Logo 1 - Horizontal - White.png
+Logo Files/Transparent/PNG/Logo/Logo 2 - Portrait - Black.png
+Logo Files/Transparent/PNG/Logo/Logo 2 - Portrait - Brand Blue.png
+Logo Files/Transparent/PNG/Logo/Logo 2 - Portrait - White.png
+Logo Files/Transparent/PNG/Logo/Logo 3 - Stacked - Black.png
+Logo Files/Transparent/PNG/Logo/Logo 3 - Stacked - Brand Blue.png
+Logo Files/Transparent/PNG/Logo/Logo 3 - Stacked - White.png
+Logo Files/Transparent/SVG/Icon/Icon 1 - Primary - Black.svg
+Logo Files/Transparent/SVG/Icon/Icon 1 - Primary - Brand Blue.svg
+Logo Files/Transparent/SVG/Icon/Icon 1 - Primary - White.svg
+Logo Files/Transparent/SVG/Logo/Logo 1 - Horizontal - Black.svg
+Logo Files/Transparent/SVG/Logo/Logo 1 - Horizontal - Brand Blue.svg
+Logo Files/Transparent/SVG/Logo/Logo 1 - Horizontal - White.svg
+Logo Files/Transparent/SVG/Logo/Logo 2 - Portrait - Black.svg
+Logo Files/Transparent/SVG/Logo/Logo 2 - Portrait - Brand Blue.svg
+Logo Files/Transparent/SVG/Logo/Logo 2 - Portrait - White.svg
+Logo Files/Transparent/SVG/Logo/Logo 3 - Stacked - Black.svg
+Logo Files/Transparent/SVG/Logo/Logo 3 - Stacked - Brand Blue.svg
+Logo Files/Transparent/SVG/Logo/Logo 3 - Stacked - White.svg
+Preview/EndorseCrypto Logo Pack Preview.jpg
+README.txt
+Source PNGs/Icon 1 - Primary.png
+Source PNGs/Logo 1 - Horizontal.png
+Source PNGs/Logo 2 - Portrait.png
+Source PNGs/Logo 3 - Stacked.png
+Web Assets/Apple/apple-touch-icon-180x180.png
+Web Assets/Favicon/favicon-16x16.png
+Web Assets/Favicon/favicon-32x32.png
+Web Assets/Favicon/favicon-48x48.png
+Web Assets/Favicon/favicon-64x64.png
+Web Assets/Favicon/favicon.ico
+Web Assets/Header/endorsecrypto-horizontal-1024w.png
+Web Assets/Header/endorsecrypto-horizontal-1536w.png
+Web Assets/Header/endorsecrypto-horizontal-2048w.png
+Web Assets/Header/endorsecrypto-horizontal-512w.png
+Web Assets/Header/endorsecrypto-portrait-1120w.png
+Web Assets/Header/endorsecrypto-portrait-320w.png
+Web Assets/Header/endorsecrypto-portrait-640w.png
+Web Assets/Header/endorsecrypto-portrait-960w.png
+Web Assets/PWA/icon-1024x1024.png
+Web Assets/PWA/icon-128x128.png
+Web Assets/PWA/icon-144x144.png
+Web Assets/PWA/icon-152x152.png
+Web Assets/PWA/icon-192x192.png
+Web Assets/PWA/icon-256x256.png
+Web Assets/PWA/icon-384x384.png
+Web Assets/PWA/icon-512x512.png
+Web Assets/PWA/icon-72x72.png
+Web Assets/PWA/icon-96x96.png
+Web Assets/PWA/manifest-icons.json
+Web Assets/PWA/maskable-192x192.png
+Web Assets/PWA/maskable-512x512.png
+Web Assets/Social/endorsecrypto-og-1200x630.jpg

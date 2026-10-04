@@ -1,0 +1,32 @@
+import { cn } from "~/lib/cn";
+
+// The EndorseCrypto mark, simplified from the logo pack's traced icon. The site uses the mark and
+// wordmark without the pack's "Crypto Portfolio Management" tagline.
+export const MARK =
+	"M42.8 222.8L42.8 225.5L44.5 229.8L49.5 235.5L57.8 243.5L65 249.5L78 258.3L89.8 264.3L104.3 269.5L115.3 272L129.8 273.8L145.8 273.5L160 271.5L171.8 268.5L185.3 263.3L198.5 256L212.8 245.5L227.8 230.5L230 225.3L229.5 220.8L226.3 216.5L222.5 214.8L217.8 214.8L214 216.5L203.3 227.5L195.5 234L184.5 241.3L174.5 246.3L163.3 250.3L153.8 252.5L142.3 254L128.8 254L117.3 252.5L108.8 250.5L100.8 247.8L89.5 242.5L80.8 237L74 231.8L58 216.3L92 216L102 203L113.5 213.5L155 213.5L193 186.5L112.3 186.3L126 168.3L90.8 168.3L56.3 214.8L50.3 214.8L46.8 216.3L44 219.3ZM61.5 138.8L91.5 166.3L134.5 166L166.5 138.8ZM72.3 92.3L97 116.5L98.8 118L101 118.3L166.5 118.3L197.5 92.5ZM33 98.3L32 100.8L31.8 103.8L33.5 108.5L35.5 110.5L38.8 112.3L43.3 112.5L45 112L48.8 109.5L56.5 98L66.3 86.3L78.5 75.3L89 68.3L97.8 63.8L110 59.3L116.8 57.5L131.3 55.5L147.5 56L160.8 58.5L170 61.5L178.5 65.3L187 70L193.5 74.5L201.5 81.3L208.5 88.3L217.3 99.5L221.8 106.8L225.8 114.8L231.8 132.8L234 148L234 161.3L233 169.8L230.8 180L226.5 192L226 197.8L227 200.5L229.5 203.5L234.3 205.8L237.5 205.8L240.5 204.8L245 200.3L248.5 191.3L251.5 180L253 171.3L254 157.8L253.8 148L252.3 135.5L249.8 124.5L245.5 111.8L241 101.8L236.5 93.8L229 83L222 74.8L214.5 67.3L203.5 58.3L193.5 51.8L184 46.8L176.3 43.5L164.3 39.8L155.8 38L142 36.5L127 36.8L117 38L98.8 42.8L90 46.3L81 50.8L69.3 58.3L62.3 63.8L47 79L40.5 87.3Z";
+
+export function Mark({ className }: { className?: string }) {
+	return (
+		<svg
+			aria-hidden="true"
+			className={cn("text-brand", className)}
+			fill="currentColor"
+			viewBox="28 33 230 244"
+		>
+			<path d={MARK} fillRule="evenodd" />
+		</svg>
+	);
+}
+
+export function Lockup({ className }: { className?: string }) {
+	return (
+		<span
+			className={cn("inline-flex items-center gap-2.5 text-brand", className)}
+		>
+			<Mark className="h-8 w-8" />
+			<span className="font-brand font-extrabold text-[19px] uppercase tracking-[0.04em]">
+				EndorseCrypto
+			</span>
+		</span>
+	);
+}
